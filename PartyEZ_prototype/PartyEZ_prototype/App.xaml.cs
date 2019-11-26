@@ -14,7 +14,7 @@ namespace PartyEZ_prototype
             InitializeComponent();
 
             DependencyService.Register<MockDataStore>();
-            MainPage = new LoginPage();
+            MainPage = new OpeningPage();
         }
 
         protected override void OnStart()

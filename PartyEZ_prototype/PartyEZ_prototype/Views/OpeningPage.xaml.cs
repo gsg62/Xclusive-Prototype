@@ -10,18 +10,16 @@ using Xamarin.Forms.Xaml;
 namespace PartyEZ_prototype.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class LoginPage : ContentPage
+    public partial class OpeningPage : ContentPage
     {
-        public LoginPage()
+        public OpeningPage()
         {
             InitializeComponent();
         }
 
-        /*
-        async void GoToLogin(object sender)
+        async void GoToLoginPage(object sender, EventArgs args)
         {
             await Navigation.PushModalAsync(new NavigationPage(new LoginPage()));
         }
-        */
     }
 }
