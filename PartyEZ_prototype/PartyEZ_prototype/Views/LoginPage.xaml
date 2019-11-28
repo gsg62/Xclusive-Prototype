@@ -12,7 +12,7 @@
                 <Setter Property="TextColor" Value="#24586e"/>
                 <Setter Property="FontSize" Value="50"/>
             </Style>
-            <Style x:Key="CaptionStyle" TargetType="Entry">
+            <Style x:Key="EntryStyle" TargetType="Entry">
                 <Setter Property="PlaceholderColor" Value="#24586e"/>
                 <Setter Property="FontSize" Value="20"/>
             </Style>
@@ -21,27 +21,38 @@
                 <!--
                 <Setter Property="TextColor" Value="Black"/>
                 <Setter Property="BackgroundColor" Value="#3b3b3b"/>-->
-                </Style>
+            </Style>
+            <Style x:Key="BackButtonStyle" TargetType="Button">
+                <Setter Property="FontSize" Value="18"/>
+                <Setter Property="BackgroundColor" Value="White"/>
+                <Setter Property="TextColor" Value="#24586e"/>
+            </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
     
     <ContentPage.Content>
         <StackLayout>
+            <!--
+            <Button Text="Back" Clicked="BackToLanding"
+                HorizontalOptions= "Start"
+                Style="{StaticResource BackButtonStyle}"/>
+ -->           
             <Label Text="Login"
+                VerticalOptions="CenterAndExpand"
                 HorizontalOptions="CenterAndExpand" 
                 Style="{StaticResource TitleStyle}"/>
 
             <Entry Placeholder="Username" 
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand"
-                Style="{StaticResource CaptionStyle}"/>
+                Style="{StaticResource EntryStyle}"/>
 
             <Entry Placeholder="Password" 
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand"
-                Style="{StaticResource CaptionStyle}"/>
-            
-            <Button Text="Login" 
+                Style="{StaticResource EntryStyle}"/>
+
+            <Button Text="Login" Clicked="GoToHomePage"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" 
                 WidthRequest="160"

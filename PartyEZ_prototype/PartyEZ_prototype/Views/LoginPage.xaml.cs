@@ -17,11 +17,15 @@ namespace PartyEZ_prototype.Views
             InitializeComponent();
         }
 
-        /*
-        async void GoToLogin(object sender)
+        async void BackToLanding(object sender, EventArgs args)
         {
-            await Navigation.PushModalAsync(new NavigationPage(new LoginPage()));
+            await Application.Current.MainPage.Navigation.PopAsync();
+            //   await Navigation.PushModalAsync(new NavigationPage(new LoginPage()));
         }
-        */
+
+        async void GoToHomePage(object sender, EventArgs args)
+        {
+            await Navigation.PushModalAsync(new NavigationPage(new MainMasterDetailPage()));
+        }
     }
 }

@@ -4,7 +4,9 @@ using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace PartyEZ_prototype.ViewModels
+
 {
+    
     public class AboutViewModel : BaseViewModel
     {
         public AboutViewModel()
@@ -16,4 +18,5 @@ namespace PartyEZ_prototype.ViewModels
 
         public ICommand OpenWebCommand { get; }
     }
+    
 }
