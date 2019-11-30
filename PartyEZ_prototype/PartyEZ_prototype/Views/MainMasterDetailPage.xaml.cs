@@ -24,12 +24,22 @@ namespace PartyEZ_prototype.Views
 
             if (item.Title == "Settings")
             {
-                Detail.Navigation.PushAsync(new SettingsPage());
+                Detail = new NavigationPage(new SettingsPage());
+                IsPresented = false;
+            }
+            if (item.Title == "Home")
+            {
+                Detail = new NavigationPage(new HomeTabbedPage());
+                IsPresented = false;
+            }
+            if (item.Title == "Profile")
+            {
+                Detail = new NavigationPage(new ProfilePage());
                 IsPresented = false;
             }
             else
             {
-                Application.Current.Properties["MenuName"] = item.Title;
+                //Application.Current.Properties["MenuName"] = item.Title;
                 Detail = new NavigationPage(new HomeTabbedPage());
                 IsPresented = false;
             }
@@ -38,9 +48,10 @@ namespace PartyEZ_prototype.Views
         {
             return new List<MasterPageList>
             {
-                new MasterPageList() { Title = "Games", Icon = "home.png" },
-                new MasterPageList() { Title = "Movies", Icon = "admin.png" },
-                new MasterPageList() { Title = "Setting", Icon = "setting.png" }
+                new MasterPageList() { Title = "Home" },// Icon = "home.png" },
+                new MasterPageList() { Title = "Profile" },// Icon = "home.png" },
+                new MasterPageList() { Title = "Messaging" },// Icon = "admin.png" },
+                new MasterPageList() { Title = "Setting" }, //Icon = "setting.png" }
             };
         }
     }

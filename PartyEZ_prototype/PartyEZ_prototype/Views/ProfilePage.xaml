@@ -4,11 +4,13 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="PartyEZ_prototype.Views.InvitesPage">
-    
-    <Label Text="This is the Invites Page"
-           HorizontalOptions="CenterAndExpand"
-           VerticalOptions="CenterAndExpand" >
-    </Label>
-
+             x:Class="PartyEZ_prototype.Views.ProfilePage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Profile Page"
+                FontSize="Header"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>

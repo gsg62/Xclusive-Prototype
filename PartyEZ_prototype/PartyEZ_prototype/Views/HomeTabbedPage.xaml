@@ -1,10 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"  
+
+    <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"  
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"  
              xmlns:views="clr-namespace:PartyEZ_prototype.Views"  
              Title = "Home Page"  
              x:Class="PartyEZ_prototype.Views.HomeTabbedPage">
-    <TabbedPage.Children>
+    
+    
+    
+    <ContentPage Title="Invites">
+        <Label Text="Invites"></Label>
+    </ContentPage>
+
+    <ContentPage Title="Upcoming">
+        <Label Text="Upcoming"></Label>
+    </ContentPage>
+
+    <ContentPage Title="My Events">
+        <Label Text="My Events"></Label>
+    </ContentPage>
+
+    <!--<TabbedPage.Children>
         <NavigationPage Title="Invites" >
             <x:Arguments>
                 <views:InvitesPage/>
@@ -20,6 +36,6 @@
                 <views:ItemsPage/>
             </x:Arguments>
         </NavigationPage>
-    </TabbedPage.Children>
+    </TabbedPage.Children>-->
 
 </TabbedPage>  
