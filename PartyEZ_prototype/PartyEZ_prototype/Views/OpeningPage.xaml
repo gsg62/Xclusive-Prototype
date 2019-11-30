@@ -21,7 +21,7 @@
                 <!--
                 <Setter Property="TextColor" Value=""/>              
                 <Setter Property="BackgroundColor" Value="#3b3b3b"/>-->
-                </Style>
+            </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
     

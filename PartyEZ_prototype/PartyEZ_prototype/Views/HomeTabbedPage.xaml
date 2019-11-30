@@ -5,19 +5,92 @@
              xmlns:views="clr-namespace:PartyEZ_prototype.Views"  
              Title = "Home Page"  
              x:Class="PartyEZ_prototype.Views.HomeTabbedPage">
-    
-    
-    
+
+
+    <!--This is the My Invites Tab Page-->
     <ContentPage Title="Invites">
         <Label Text="Invites"></Label>
     </ContentPage>
-
+        
+    <!--This is the Upcoming Events Tab Page-->
     <ContentPage Title="Upcoming">
         <Label Text="Upcoming"></Label>
     </ContentPage>
-
+    
+    <!--This is the My Events Tab Page-->
     <ContentPage Title="My Events">
-        <Label Text="My Events"></Label>
+        <ContentPage.Resources>
+            <ResourceDictionary>
+                <Style x:Key="TitleStyle" TargetType="Label">
+                    <Setter Property="TextColor" Value="#24586e"/>
+                    <Setter Property="FontSize" Value="30"/>
+                </Style>
+                <Style x:Key="ItemStyle" TargetType="Label">
+                    <Setter Property="TextColor" Value="#24586e"/>
+                    <Setter Property="FontSize" Value="16"/>
+                </Style>
+                <Style x:Key="DetailStyle" TargetType="Label">
+                    <Setter Property="TextColor" Value="#24586e"/>
+                    <Setter Property="FontSize" Value="13"/>
+                </Style>
+                <Style x:Key="ButtonStyle" TargetType="Button">
+                    <Setter Property="FontSize" Value="16"/>
+                </Style>
+            </ResourceDictionary>
+        </ContentPage.Resources>
+
+        <StackLayout Padding="6, 6, 6, 6">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+            <Label Text="My Events" 
+               Grid.Row="0"
+               Grid.Column="0"
+               HorizontalOptions="Start"
+               Style="{StaticResource TitleStyle}"/>
+            
+            <Button Text="Add" 
+                Grid.Row="0"
+                Grid.Column="1"
+                HorizontalOptions="End" 
+                WidthRequest="80"
+                HeightRequest="40"
+                Style="{StaticResource ButtonStyle}"/>
+            </Grid>
+
+            <BoxView Color="Black" WidthRequest ="100" HeightRequest="1"/>
+            
+            <Label Text="End of Semester Party"
+                HorizontalOptions="StartAndExpand"
+                Style="{StaticResource ItemStyle}"/>
+            <Label Text="December 13th @10pm - 123 E. Flagstaff rd."
+                HorizontalOptions="StartAndExpand"
+                Style="{StaticResource DetailStyle}"/>
+
+            <BoxView Color="Black" WidthRequest ="100" HeightRequest="1"/>
+
+            <Label Text="Christmas Party"
+                HorizontalOptions="StartAndExpand"
+                Style="{StaticResource ItemStyle}"/>
+            <Label Text="December 25th @12pm - 456 N. Santa Claus rd."
+                HorizontalOptions="StartAndExpand"
+                Style="{StaticResource DetailStyle}"/>
+
+            <BoxView Color="Black" WidthRequest ="100" HeightRequest="1"/>
+
+            <Label Text="New Years Party"
+                HorizontalOptions="StartAndExpand"
+                Style="{StaticResource ItemStyle}"/>
+            <Label Text="December 31st @10pm - 1021 W. Decadence st."
+                HorizontalOptions="StartAndExpand"
+                Style="{StaticResource DetailStyle}"/>
+
+        </StackLayout>
     </ContentPage>
 
     <!--<TabbedPage.Children>
